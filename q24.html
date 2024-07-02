@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    function numberChecking(num) {
+        switch (Math.sign(num)) {
+            case 1:
+                console.log("The number is Positive");
+                break;
+            case -1:
+                console.log("The number is Negative");
+                break;
+            default:
+                console.log("The number is Zero");
+        }
+    }
+    numberChecking(12);
+    // Output: Positive
+    numberChecking(-1);
+    // Output: Negative
+    numberChecking(0);
+    // Output: Zero 
+</script>
+
+</html>

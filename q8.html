@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title> Area of triangle </title>
+    <style>
+        Body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        Div {
+            display: flex;
+            gap: 2rem;
+            place-content: center;
+        }
+
+        Input {
+            width: 30px;
+            padding: 15px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        Button {
+            width: 15px;
+        }
+
+        #ans {
+            border: 1px dashed black;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<h3> Calculate the area of triangle </h3>
+<div>
+    <input type="text" id="a"> <input type="text" id="b">
+    <input type="text" id="c">
+</div>
+<button onclick="cal()">Calculate</button>
+<p id="ans"></p>
+<script>
+    cal = () => {
+        const a =
+            parseInt(document.getElementById("a").value); const b =
+                parseInt(document.getElementById("b").value); const c =
+                    parseInt(document.getElementById("c").value); const sp =
+                        (a + b + c) / 2; const area = Math.sqrt(sp * ((sp - a) * (sp - b) * (sp
+                            - c))); document.getElementById("ans").innerHTML =
+                                "Answer:" + area;
+    } 
+</script>
+
+</html>

@@ -1,0 +1,81 @@
+  <!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, 
+initial-scale=1.0"> 
+<title>Math Operations</title>  
+     <style> 
+        .Table { 
+            border: 2px solid black; 
+            height: 500px; 
+            width: 500px; 
+        } 
+           </style> 
+ </head> 
+   <body> 
+    <table class="Table"> 
+        <tr> 
+            <th colspan="2">Maths Operations</th> 
+        </tr> 
+        <tr> 
+            <td>Enter 1st Number: </td> 
+            <td><input type="text" id="num1"></td> 
+        </tr> 
+        <tr> 
+            <td>Enter 2nd Number: </td> 
+            <td><input type="text" id="num2"></td> 
+        </tr> 
+        <tr> 
+            <td colspan="2"> 
+                <button 
+onclick="performOperation('+')">+</button> 
+                <button onclick="performOperation('-')">-</button> 
+                <button 
+onclick="performOperation('*')">*</button> 
+                <button onclick="performOperation('/')">/</button> 
+                <button 
+onclick="performOperation('%')">%</button> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td colspan="2">Answer is : <span 
+id="result"></span></td> 
+        </tr> 
+    </table> 
+ </body> 
+  <script> 
+        function performOperation(operation) { 
+            const num1 = 
+parseFloat(document.getElementById('num1').value); 
+            const num2 = 
+parseFloat(document.getElementById('num2').value); 
+            let result; 
+            if (isNaN(num1) || isNaN(num2)) { 
+                result = 'Please enter valid numbers'; 
+            } else { 
+                switch (operation) { 
+                    case '+': 
+                        result = num1 + num2; 
+                        break; 
+                    case '-': 
+                        result = num1 - num2; 
+                        break; 
+                    case '*': 
+                        result = num1 * num2; 
+                        break; 
+                    case '/': 
+                        result = num1 / num2; 
+                        break; 
+                    case '%': 
+                        result = num1 % num2; 
+                        break; 
+                    default: 
+                        result = 'Invalid Operation'; 
+                } 
+            } 
+            document.getElementById('result').textContent = 
+result; 
+        } 
+     </script> 
+ </html>
